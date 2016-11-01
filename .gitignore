@@ -1,5 +1,3 @@
-# Keep IntelliJ files out of github to reduce potential conflicts when others import.
-
+_site/
 .idea
-core.iml
-src/_site
+.DS_Store

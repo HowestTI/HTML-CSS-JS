@@ -3,27 +3,9 @@ layout: default
 title: Assessments
 ---
 
-<div class="breadcrumb-bar">
-  <div class="container">
-    <ol class="breadcrumb">
-      {% if site.morea_head_breadcrumb_link %}
-      <li><a href="{{ site.morea_head_breadcrumb_link }}">{{ site.morea_head_breadcrumb_label }}</a></li>
-      {% endif %}
-      <li><a href="{{ site.baseurl }}/">Home</a></li>
-      <li class="active">{{ page.title }}</li>
-    </ol>
-  </div>
-</div>
-
 <div class="container">
   <h1>Assessments <small>in module order</small></h1>
 </div>
-
-{% if site.morea_overview_assessments %}
-<div class="container">
-  {{ site.morea_overview_assessments.content | markdownify }}
-</div>
-{% endif %}
 
 {% for module in site.morea_module_pages %}
 {% if module.morea_coming_soon != true and module.morea_assessments.size > 0 %}
